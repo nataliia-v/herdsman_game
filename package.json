@@ -1,0 +1,43 @@
+{
+  "name": "herdsman-game",
+  "description": "Herdsman game built with Vite, TypeScript and PixiJS",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix --ext .js,.ts",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "eslint . --fix --ext .js,.ts",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "pixi.js": "^8.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.9"
+  },
+  "dependencies": {
+    "pixi.js": "^8.1.0"
+  }
+}
